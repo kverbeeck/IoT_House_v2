@@ -27,4 +27,5 @@ Breadboard
 1 x Fan 12V
 1 x transistor
 Resistors
-1 x Rotary Encoder or 2 x push buttons + capacitors
+1 x Rotary Encoder  https://github.com/Ceylan-Geysemans/Blynk_thermostat/blob/main/code.ino https://lastminuteengineers.com/rotary-encoder-arduino-tutorial/ (2 interrupts gebruiken, 1 voor CLK en 1 voor DT
+or 2 x push buttons + capacitors 
