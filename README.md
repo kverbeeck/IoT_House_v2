@@ -28,5 +28,3 @@ Breadboard
 1 x transistor
 Resistors
 1 x Rotary Encoder or 2 x push buttons + capacitors
-![image](https://user-images.githubusercontent.com/52450051/112319884-c909e880-8cae-11eb-85ae-c2ee623f9324.png)
-
