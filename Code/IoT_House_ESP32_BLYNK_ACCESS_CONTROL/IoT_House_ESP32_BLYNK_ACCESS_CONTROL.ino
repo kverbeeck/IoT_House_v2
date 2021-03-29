@@ -45,15 +45,15 @@ char server[] = "192.168.10.122"; // RPi4B
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth[] = "--e5M1fVjCDpjkx8_o_pqo1iyJTpcEm1";
+char auth[] = "********";
 
 /*
    Wi-Fi
 */
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "BLYNK"; // Use the Orange modem Wi-Fi
-char pass[] = "Bucky196";
+char ssid[] = "********"; // Use the Orange modem Wi-Fi
+char pass[] = "********";
 
 /* OLED 128x64 Monochrone Screen
 */
