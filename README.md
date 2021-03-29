@@ -26,5 +26,11 @@ Wire.h >> https://github.com/espressif/arduino-esp32 (This is a package af sever
 Adafruit_Sensor.h >> https://github.com/adafruit/Adafruit_Sensor
 Adafruit_BME280.h >> https://github.com/adafruit/Adafruit_BME280_Library
 WiFi.h >> https://github.com/espressif/arduino-esp32 (This is a package af several neede libraries)
-
+WiFiClient.h >> https://github.com/espressif/arduino-esp32 (This is a package af several neede libraries)
+BlynkSimpleEsp32.h >> https://github.com/blynkkk/blynk-library
+Adafruit_SSD1306.h >> https://github.com/adafruit/Adafruit_SSD1306
+Fonts/FreeSerif9pt7b.h >> https://learn.adafruit.com/adafruit-gfx-graphics-library/using-fonts
+Adafruit_GFX.h >> https://github.com/adafruit/Adafruit-GFX-Library
+Servo.h >> https://github.com/RoboticsBrno/ServoESP32
+MFRC522.h >> https://github.com/miguelbalboa/rfid/archive/master.zip
 
