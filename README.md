@@ -33,4 +33,5 @@ Fonts/FreeSerif9pt7b.h >> https://learn.adafruit.com/adafruit-gfx-graphics-libra
 Adafruit_GFX.h >> https://github.com/adafruit/Adafruit-GFX-Library
 Servo.h >> https://github.com/RoboticsBrno/ServoESP32
 MFRC522.h >> https://github.com/miguelbalboa/rfid/archive/master.zip
+SPI.h >> https://github.com/PaulStoffregen/SPI
 
