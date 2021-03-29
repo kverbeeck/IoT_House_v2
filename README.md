@@ -23,6 +23,7 @@ in this repository and the demonstration video >> https://www.youtube.com/watch?
 3) Open you Arduino IDE >> https://www.arduino.cc/en/software and first install the necessary board managers (ESP32) if not yet installed, follow the instructions on this page if Windows >> https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/  and this page if MacOS or Linux  https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-mac-and-linux-instructions/
 4) Install following libraries from following links. In github, click on the Green "Code" button and then "Download zip". No need to unzip the file
 You can then install these like follows >> In Arduino IDE, go to Sketch > Include Library > Add . ZIP library and select the library you’ve just downloaded.
+I recommend to fully restart Arduino IDE after installing all libraries !!!
 Wire.h >> https://github.com/espressif/arduino-esp32 (This is a package af several neede libraries)
 Adafruit_Sensor.h >> https://github.com/adafruit/Adafruit_Sensor
 Adafruit_BME280.h >> https://github.com/adafruit/Adafruit_BME280_Library
