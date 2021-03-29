@@ -11,7 +11,7 @@ The STL files are still the IoT house version 1, i will update these files in th
 
 i recommend a 0.2 layer height for the bigger parts and 0.1 for the smaller detail, no rafts, skirts, supports needed.
 
-All ESP32 code can be found in this repository as well.
+All ESP32 code i wrote for this project can be found in this repository as well.
 
 
 Steps
@@ -19,8 +19,9 @@ _____________________________
 
 1) Start by building the project following the schematics, You can also have a look at the Photos and screenshots (BLYNK app) 
 in this repository and the demonstration video >> https://www.youtube.com/watch?v=XRs4ygz1CqU
-2) Open you Arduino IDE >> https://www.arduino.cc/en/software and first install the necessary board managers (ESP32) if not yet installed, follow the instructions on this page if Windows >> https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/  and this page if MacOS or Linux  https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-mac-and-linux-instructions/
-3) Install following libraries from following links. In github, click on the Green "Code" button and then "Download zip". No need to unzip the file
+2) Follow the instructions to set up BLYNK here >> https://blynk.io/en/getting-started , however i recommend setting up your own BLYNK server on a Raspberry Pi 4B, when using the CLOUD based server, there are limitations on how many widgets you will be able to use. Follow these instructions >> https://github.com/blynkkk/blynk-server
+3) Open you Arduino IDE >> https://www.arduino.cc/en/software and first install the necessary board managers (ESP32) if not yet installed, follow the instructions on this page if Windows >> https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/  and this page if MacOS or Linux  https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-mac-and-linux-instructions/
+4) Install following libraries from following links. In github, click on the Green "Code" button and then "Download zip". No need to unzip the file
 You can then install these like follows >> In Arduino IDE, go to Sketch > Include Library > Add . ZIP library and select the library you’ve just downloaded.
 Wire.h >> https://github.com/espressif/arduino-esp32 (This is a package af several neede libraries)
 Adafruit_Sensor.h >> https://github.com/adafruit/Adafruit_Sensor
@@ -34,4 +35,5 @@ Adafruit_GFX.h >> https://github.com/adafruit/Adafruit-GFX-Library
 Servo.h >> https://github.com/RoboticsBrno/ServoESP32
 MFRC522.h >> https://github.com/miguelbalboa/rfid/archive/master.zip
 SPI.h >> https://github.com/PaulStoffregen/SPI
-
+5) Now its time to upload the codes to the ESP32s. Upload "IoT_House_ESP32_BLYNK_ACCESS_CONTROL.ino" to the first ESP32 and "IoT_House_ESP32_CENTRAL_HEATER_GAS_Detection_FINAL.ino" to the second one. See this video for uploading code to the ESP32 using Arduino IDE, make sure that the needed drivers are installed for your COM port >> https://www.youtube.com/watch?v=G6l259vEt7k and https://www.youtube.com/watch?v=0XX6fwdxO9Q
+6) 
