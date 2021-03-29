@@ -1,31 +1,30 @@
 # FreestyleIoT_Project
 
-Heb je de smaak te pakken?
-Dan kan je nu al beginnen denken/bouwen aan je finale IoT sensor en interfacing project, wat tevens evaluatie 7 gaat zijn.  Je kan hieraan de ganse 7 de lesdag werken en je kan terwijl beroep doen op assistentie van de docent als je ergens met vragen zit.
-evaluatie 7: Freestyle IoT project:
-Maak zelf een ORIGINELE IoT applicatie naar keuze.
-Minimum vereisten:
-•	Het project moet ergens data verzamelen via sensoren - BME280 & status PIR, SERVO, RFID
-•	Het project moet deze data verwerken en op basis van de ingelezen data iets regelen of uitvoeren - Thermostaat
-•	Het project moet externe hardware aansturen (lampjes, motoren, geluid, deurslot, verwarming,…) - LED (central heating), cooling (fan) & Servo (door)
-•	Het project heeft bij voorkeur zowel een lokale display ter controle van de parameters als een remote control via webserver en/of Blynk app. - OLED 128x64 en uitlezen en aansturen in BLYNK
-•	Het project moet volledig gedocumenteerd zijn op je GitHub pagina zodat anderen het kunnen nabouwen - Github repository maken
-•	Het project moet door jezelf voorgesteld worden in een video met demo  - YouTube
+For this project, i ve chosen to upgrade my existing IoT house >> https://www.youtube.com/watch?v=xoJDLW5kjLk and make it really internet of things by monitoring sensor outputs locally and via the BLYNK app >> https://blynk.io/ and control actuators locally and via BLYNK.
 
-1 x MEGA2560
-1 x ESP8266
-1 x ESP32
-1 x RGB LED
-2 x OLED 128x64
-1 x IR Remote
-1 x IR Receiver
-1 x PIR
-4 x high power RED LEDs
-1 x power brick 12V
-1 x power converter 3.3V/5V
-Breadboard
-1 x Fan 12V
-1 x transistor
-Resistors
-1 x Rotary Encoder  https://github.com/Ceylan-Geysemans/Blynk_thermostat/blob/main/code.ino https://lastminuteengineers.com/rotary-encoder-arduino-tutorial/ (2 interrupts gebruiken, 1 voor CLK en 1 voor DT
-or 2 x push buttons + capacitors 
+Link to the kitlist >> https://docs.google.com/spreadsheets/d/1GlvLmVtN7IZRM3OurWxvNwD4gjMKiJFMoon5G-sc7mI/edit?usp=sharing
+
+The full Schematic can be found in this repository.
+
+If you have a 3D printer and want to print your own house, you can find the STL files in this repository.
+The STL files are still the IoT house version 1, i will update these files in the near future to have a cleaner finish.
+
+i recommend a 0.2 layer height for the bigger parts and 0.1 for the smaller detail, no rafts, skirts, supports needed.
+
+All ESP32 code can be found in this repository as well.
+
+
+Steps
+_____________________________
+
+1) Start by building the project following the schematics, You can also have a look at the Photos and screenshots (BLYNK app) 
+in this repository and the demonstration video >> https://www.youtube.com/watch?v=XRs4ygz1CqU
+2) Open you Arduino IDE >> https://www.arduino.cc/en/software and first install the necessary board managers (ESP32) if not yet installed, follow the instructions on this page if Windows >> https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/  and this page if MacOS or Linux  https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-mac-and-linux-instructions/
+3) Install following libraries from following links. In github, click on the Green "Code" button and then "Download zip". No need to unzip the file
+You can then install these like follows >> In Arduino IDE, go to Sketch > Include Library > Add . ZIP library and select the library you’ve just downloaded.
+Wire.h >> https://github.com/espressif/arduino-esp32 (This is a package af several neede libraries)
+Adafruit_Sensor.h >> https://github.com/adafruit/Adafruit_Sensor
+Adafruit_BME280.h >> https://github.com/adafruit/Adafruit_BME280_Library
+WiFi.h >> https://github.com/espressif/arduino-esp32 (This is a package af several neede libraries)
+
+
