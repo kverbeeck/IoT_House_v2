@@ -7,7 +7,7 @@ Link tot the demo video of this project >> https://www.youtube.com/watch?v=XRs4y
 
 The full Schematic can be found in this repository.
 
-Read the extra notes in the ESP32 codes for aditional information about what the line of code does.
+Read the extra notes in the ESP32 codes for additional information about what the line of code does.
 
 If you have a 3D printer and want to print your own house, you can find the STL files in this repository.
 The STL files are still the IoT house version 1, i will update these files in the near future to have a cleaner finish.
