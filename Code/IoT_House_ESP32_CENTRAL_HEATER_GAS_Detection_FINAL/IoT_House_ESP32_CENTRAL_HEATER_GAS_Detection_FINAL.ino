@@ -133,7 +133,7 @@ char auth[] = "********";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "********"; // Use the Orange modem Wi-Fi
+char ssid[] = "********"; // Use your own modems' Wi-Fi
 char pass[] = "********";
 
 // Create an object "bme" for I2C communication
