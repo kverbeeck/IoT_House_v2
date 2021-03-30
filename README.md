@@ -3,6 +3,7 @@
 For this project, i ve chosen to upgrade my existing IoT house >> https://www.youtube.com/watch?v=xoJDLW5kjLk and make it really internet of things by monitoring sensor outputs locally and via the BLYNK app >> https://blynk.io/ and control actuators locally and via BLYNK.
 
 Link to the kitlist >> https://docs.google.com/spreadsheets/d/1GlvLmVtN7IZRM3OurWxvNwD4gjMKiJFMoon5G-sc7mI/edit?usp=sharing
+Link tot the demo video of this project >> https://www.youtube.com/watch?v=XRs4ygz1CqU
 
 The full Schematic can be found in this repository.
 
@@ -99,8 +100,8 @@ char auth[] = "Put your BLYNK Token here";    <<<<<
 char ssid[] = "Your SSID"; // Use your modems Wi-Fi    <<<<<
 char pass[] = "Your Wi-Fi password";    <<<<<
 
-8) Now its time to upload the codes to the ESP32s. Upload "IoT_House_ESP32_BLYNK_ACCESS_CONTROL.ino" to the first ESP32 and "IoT_House_ESP32_CENTRAL_HEATER_GAS_Detection_FINAL.ino" to the second one. See this video for uploading code to the ESP32 using Arduino IDE, make sure that the needed drivers are installed for your COM port >> https://www.youtube.com/watch?v=G6l259vEt7k and https://www.youtube.com/watch?v=0XX6fwdxO9Q
+10) Now its time to upload the codes to the ESP32s. Upload "IoT_House_ESP32_BLYNK_ACCESS_CONTROL.ino" to the first ESP32 and "IoT_House_ESP32_CENTRAL_HEATER_GAS_Detection_FINAL.ino" to the second one. See this video for uploading code to the ESP32 using Arduino IDE, make sure that the needed drivers are installed for your COM port >> https://www.youtube.com/watch?v=G6l259vEt7k and https://www.youtube.com/watch?v=0XX6fwdxO9Q
 
- 
+11) If your wirring is correct, both codes got uploaded to the ESP32s without errors and your BLYNK got set-up correctly, it should operate like shown in the demo video.
 
-7) If both codes got uploaded without errors and 
+Enjoy
