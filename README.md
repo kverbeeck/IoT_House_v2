@@ -3,7 +3,8 @@
 For this project, i ve chosen to upgrade my existing IoT house >> https://www.youtube.com/watch?v=xoJDLW5kjLk and make it really internet of things by monitoring sensor outputs locally and via the BLYNK app >> https://blynk.io/ and control actuators locally and via BLYNK.
 
 Link to the kitlist >> https://docs.google.com/spreadsheets/d/1GlvLmVtN7IZRM3OurWxvNwD4gjMKiJFMoon5G-sc7mI/edit?usp=sharing
-Link tot the demo video of this project >> https://www.youtube.com/watch?v=XRs4ygz1CqU
+Link to the demo video of this project >> https://www.youtube.com/watch?v=XRs4ygz1CqU
+Link to my PrusaPrinters page for 3D Printing files and instructions. https://www.prusaprinters.org/prints/61861-iot-hous-version-1
 
 The full Schematic can be found in this repository.
 
