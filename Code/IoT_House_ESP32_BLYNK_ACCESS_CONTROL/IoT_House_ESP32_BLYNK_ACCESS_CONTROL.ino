@@ -1,5 +1,7 @@
 /* Final Project Sensors and Interfacing
    Koen Verbeeck
+   
+   Freestyle IoT project: BLYNK - Access Control
 
    Important notes*:
 
