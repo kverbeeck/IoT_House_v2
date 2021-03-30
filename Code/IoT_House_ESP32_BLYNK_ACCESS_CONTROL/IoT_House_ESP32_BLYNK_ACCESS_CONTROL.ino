@@ -1,12 +1,10 @@
-/* Eindproject Sensoren en Interfacing
+/* Final Project Sensors and Interfacing
    Koen Verbeeck
 
-   Belangrijke nota's*:
+   Important notes*:
 
-   
-
-   De RFID-RC522 Card Reader moet rechtstreeks verbonden worden met de Arduino 3.3V poort, externe power sources werken niet !!!!
-   Als de RFID-RC522 Card Reader niet wil werken, stroom van heel het project halen !!!
+   The RFID-RC522 Card Reader should be connected directly to the ESP-32's 3.3V port, external power sources will not work !!!!
+   In case the RFID-RC522 Card Reader is stuck in Limbo, re-power the ESP32.
    
    De ESP32 en de RFID-RC522 Card Reader gebruiken het SPI protocol voor communicatie (de chip ondersteunt ook I2C en UART protocollen,
    maar deze worden niet ondersteunt door de library). The card reader en de kaart/badge communiceren via een frequentie van 13.56 MHz
@@ -299,7 +297,7 @@ void setup() {
 
   /* SERVO Motor
   */
-  myservo.attach(servoPin); // Initieer de Servo Motor
+  myservo.attach(servoPin); // Initialize Servo Motor
   myservo.write(125); // Servo start positie
 
   /* Active buzzer
@@ -351,7 +349,7 @@ void loop() {
 
   content.toUpperCase();
   if ((content.substring(1) == "C9 D1 82 A2") || (content.substring(1) == "47 E6 19 B2")) // Zet hier de UID(s) van de kaarten die je toegang wil verschaffen
-    // Indien Blauwe badge UID: C9 D1 82 A2  of  Blauwe badge UID: 47 E6 19 B2
+    // In case of blue badge UID: C9 D1 82 A2 or blue badge UID: 47 E6 19 B2
   {
     Serial.println("\t >>> Your RFID tag is known");
 
