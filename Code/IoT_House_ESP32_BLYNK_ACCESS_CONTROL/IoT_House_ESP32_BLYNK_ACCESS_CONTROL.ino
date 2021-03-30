@@ -45,13 +45,13 @@ char auth[] = "********";
 */
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "********"; // Use the Orange modem Wi-Fi
+char ssid[] = "********"; // Use your own modems' Wi-Fi
 char pass[] = "********";
 
 /* OLED 128x64 Monochrone Screen
 */
-#define SCREEN_WIDTH 128 // Breedte van het scherm
-#define SCREEN_HEIGHT 64 // Hoogte van het scherm
+#define SCREEN_WIDTH 128 // Width of the screen
+#define SCREEN_HEIGHT 64 // Height of the screen
 
 // Initialize the OLED screen
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
@@ -172,29 +172,29 @@ void Present_Badge_OLED() {
 #define RST_PIN 17 // Reset Pin
 #define SS_PIN 5 // SDA Pin
 
-// Maak een virtueel object aan genaamd "mfrc522" en definieer de SDA en Reset Pin
+// Create a virtual object named "mfrc522" and define the SDA and Reset Pin
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
 
 /* SERVO Motor
 */
 #define servoPin 13
-Servo myservo; // Maak een virtueel object aan genaamd "myservo"
+Servo myservo; // Create a virtual object named "myservo"
 
 void open_close_Door() {
-  myservo.write(0); // Open de deur
-  delay(3000); // Wacht 3 seconden
-  myservo.write(125); // Sluit de deur
+  myservo.write(0); // Opens the door
+  delay(3000); // Wait for 3 seconds
+  myservo.write(125); // Close the door
   delay(300);
 }
 
 void open_Door() {
-  myservo.write(0); // Open de deur
+  myservo.write(0); // Opens the door
   Serial.println();
   Serial.println("Door Opened using BLYNK app");
 }
 
 void close_Door() {
-  myservo.write(125); // Sluit de deur
+  myservo.write(125); // Close the door
   Serial.println();
   Serial.println("Door closed using BLYNK app");
 }
@@ -220,7 +220,7 @@ BLYNK_WRITE(V3)
 */
 #define buzzerPin 12
 
-// Functie om een trieste toon af te spelen en 3 LEDs te laten blinken
+// Function to play a sad tone and blink 3 LEDs
 void sad_Tone_blink_LEDs() {
   for (int i = 0 ; i < 4 ; i++) {
     digitalWrite(buzzerPin, HIGH), digitalWrite(ledPin, HIGH);
@@ -230,7 +230,7 @@ void sad_Tone_blink_LEDs() {
   }
 }
 
-// Functie om een blije toon af te spelen
+// Function to play a happy tone
 void happy_Tone() {
   for (int i = 0; i < 120; i++)
   {
@@ -244,7 +244,7 @@ void happy_Tone() {
 void setup() {
   // put your setup code here, to run once:
 
-  Serial.begin(115200); // Initieer de serieele monitor
+  Serial.begin(115200); // Initialize the Serial Monitor
 
   /*
      Wi-Fi
@@ -268,7 +268,7 @@ void setup() {
 
   /* OLED 128x64 Monochrone Screen
   */
-  // Initialiseer het OLED scherm op I2C address 0x3C
+  // Initialize the OLED screen on I2C address 0x3C
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
     Serial.println(F("SSD1306 allocation failed"));
     for (;;);
@@ -285,15 +285,15 @@ void setup() {
 
   /* RFID-RC522 Card Reader
   */
-  SPI.begin(); // Initieer de SPI bus
-  mfrc522.PCD_Init(); // Initieer de MFRC522 RFID Card Reader
+  SPI.begin(); // Initialize the SPI bus
+  mfrc522.PCD_Init(); // Initialize the MFRC522 RFID Card Reader
   Serial.println("Please present your tag to the RFID tag reader...");
   Serial.println();
 
   /* SERVO Motor
   */
-  myservo.attach(servoPin); // Initialize Servo Motor
-  myservo.write(125); // Servo start positie
+  myservo.attach(servoPin); // Initialize the Servo Motor
+  myservo.write(125); // Servo start position
 
   /* Active buzzer
   */
@@ -312,25 +312,25 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-  // Deze functie moete bovenaan staan, anders werkt het niet.
+  // This function should be at the top of the void loop() to make it work !!!!
   Blynk.run();
 
-  // Toon "Present, your badge" op het OLED scherm
+  // Shows "Present, your badge" on the OLED screen
   Present_Badge_OLED();
 
-  // Wacht op een badge en lees deze in
+  // Wait for an RFID badge and read it
   if ( ! mfrc522.PICC_IsNewCardPresent())
   {
     return;
   }
-  // Lees de UID van de kaart
+  // Read the cards' UID
   if ( ! mfrc522.PICC_ReadCardSerial())
   {
     return;
   }
-  // Toon de UID op de serial monitor
+  // Show the UID on the Serial Monitor
 
-  Serial.println(); // Print een lege lijn
+  Serial.println(); // Print an empty line
   Serial.print("Uw UID is: ");
   String content;
 
@@ -343,36 +343,39 @@ void loop() {
   }
 
   content.toUpperCase();
-  if ((content.substring(1) == "C9 D1 82 A2") || (content.substring(1) == "47 E6 19 B2")) // Zet hier de UID(s) van de kaarten die je toegang wil verschaffen
+  if ((content.substring(1) == "C9 D1 82 A2") || (content.substring(1) == "47 E6 19 B2")) // put here the UIDs' of the cards you wan't go give access 
     // In case of blue badge UID: C9 D1 82 A2 or blue badge UID: 47 E6 19 B2
   {
     Serial.println("\t >>> Your RFID tag is known");
 
     if (content.substring(1) == "C9 D1 82 A2") {
-      // Blij gezicht + blije toon + bericht op Serial Monitor !!!
+      // Message on Serial Monitor
       Serial.print("You may enter, welcome Koen !!!");
       Serial.println();
+      // Sends a BLYNK notification
       Blynk.notify("Koen has just entered the IoT House");
       welcome_OLED_Koen();
     }
     if (content.substring(1) == "47 E6 19 B2") {
-      // Blij gezicht + blije toon + bericht op Serial Monitor !!!
+      // Message on Serial Monitor
       Serial.print("You may enter, welcome Vero !!!");
       Serial.println();
+      // Sends a BLYNK notification
       Blynk.notify("Vero has just entered the IoT House");
       welcome_OLED_Vero();
     }
-    // Deur gaat open
+    // Open the door
     happy_Tone();
     open_close_Door();
   }
 
   else {
-    // Elke andere kaart waarvan de UID niet is geconfigureerd om toegang te verschaffen
-    // Deur blijft toe + triest gezicht + trieste toon + bericht op Serial Monitor !!!
+    // Every other UID not known by the system
+    // Message on Serial Monitor
     Serial.println("\t >>> Your RFID tag is unknown");
     Serial.println("Access Denied !!!");
     Serial.println();
+    // Sends a BLYNK notification
     Blynk.notify("IoT House: Alarm !!!! Unknown RFID tag detected");
     denied_OLED();
     sad_Tone_blink_LEDs();
