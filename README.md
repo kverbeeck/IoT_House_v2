@@ -6,6 +6,8 @@ Link to the kitlist >> https://docs.google.com/spreadsheets/d/1GlvLmVtN7IZRM3Our
 
 The full Schematic can be found in this repository.
 
+Read the extra notes in the ESP32 codes for aditional information about what the line of code does.
+
 If you have a 3D printer and want to print your own house, you can find the STL files in this repository.
 The STL files are still the IoT house version 1, i will update these files in the near future to have a cleaner finish.
 
