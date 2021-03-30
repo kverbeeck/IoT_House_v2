@@ -6,20 +6,15 @@
    The RFID-RC522 Card Reader should be connected directly to the ESP-32's 3.3V port, external power sources will not work !!!!
    In case the RFID-RC522 Card Reader is stuck in Limbo, re-power the ESP32.
    
-   De ESP32 en de RFID-RC522 Card Reader gebruiken het SPI protocol voor communicatie (de chip ondersteunt ook I2C en UART protocollen,
-   maar deze worden niet ondersteunt door de library). The card reader en de kaart/badge communiceren via een frequentie van 13.56 MHz
-   (ISO 14443A standard tags)
+   De ESP32 en de RFID-RC522 Card Reader use the SPI protocol for communication (the chip also supports I2C and UART protocols,
+   but these are not supported by the lybrary library). The card reader and card/badge communicate on a frequency of 13.56 MHz
+   (ISO 14443A standard tags).
 
-   Interrupt Pins op de ESP32 Dev Kit C V4: All GPIO Pins
-   PWM Pins op de ESP32 Dev Kit C V4: All Digital In/Out ports
-
-   PIR HC SR501 Motion Sensor status, 0 is geen detectie, 1 is detectie. De sensor zal op 1 blijven staan gedurende de ingestelde
-   time delay na detectie.
-
-   Geef de PIR sensor enkele seconden nadat er een switch tussen zon en maanstand gebeurt !!!!
-
-   BLYNK: v0.6.1 is de laatste stabiele versie, NIET updaten naar 1.0.0 Beta, deze geeft problemen.
-   5 seconds delay tussen BLYNK Push Notifications.
+   Interrupt Pins on the ESP32 Dev Kit C V4: All GPIO Pins.
+   PWM Pins on the ESP32 Dev Kit C V4: All Digital In/Out ports.
+  
+   BLYNK: v0.6.1 is the latest stable version, DON'T update to 1.0.0 Beta, this will halt the program.
+   There is a 5 seconds delay in between BLYNK Push Notifications.
 */
 
 #define BLYNK_PRINT Serial
