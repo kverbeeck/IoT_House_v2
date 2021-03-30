@@ -1,10 +1,8 @@
 /*
-   Evaluatie Week 5: een op afstand bedienbare IoT centrale verwarmingsregelaar:
-   Gebruik een digitale temperatuursensor BME280.
-   Geef de waarde weer op je telefoon.
-   Creeer een thermometer wijzerplaat instelling op je telefoon.
-   Als de temperatuur op de locatie op afstand onder deze vooraf ingestelde waarde komt,
-   moet een LED aangaan (het verwarmingssysteem) en dit moet op je telefoon worden weergegeven.
+ * Final Project Sensors and Interfacing
+   Koen Verbeeck
+   
+   Freestyle IoT project: Central Heater + GAS Detection
 */
 
 #define BLYNK_PRINT Serial
