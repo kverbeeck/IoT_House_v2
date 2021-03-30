@@ -79,9 +79,23 @@ if ((content.substring(1) == "C9 D1 82 A2") || (content.substring(1) == "47 E6 1
       welcome_OLED_Vero();
     }
 
+9) Change following lines in "IoT_House_ESP32_CENTRAL_HEATER_GAS_Detection_FINAL.ino" to get connected to your Wi-Fi access point, the correct BLYNK server and Token. >>
 
+// Own Blynk Server and port
+char server[] = "BLYNK Server IP address"; // RPi4B    <<<<<
+#define port 8080 // Default port
 
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth[] = "Put your BLYNK Token here";    <<<<<
 
+/*
+   Wi-Fi
+*/
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid[] = "Your SSID"; // Use your modems Wi-Fi    <<<<<
+char pass[] = "Your Wi-Fi password";    <<<<<
 
 8) Now its time to upload the codes to the ESP32s. Upload "IoT_House_ESP32_BLYNK_ACCESS_CONTROL.ino" to the first ESP32 and "IoT_House_ESP32_CENTRAL_HEATER_GAS_Detection_FINAL.ino" to the second one. See this video for uploading code to the ESP32 using Arduino IDE, make sure that the needed drivers are installed for your COM port >> https://www.youtube.com/watch?v=G6l259vEt7k and https://www.youtube.com/watch?v=0XX6fwdxO9Q
 
